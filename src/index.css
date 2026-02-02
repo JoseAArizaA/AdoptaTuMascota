@@ -1,0 +1,113 @@
+/* =========================================================
+   RESET & VARIABLES
+   ========================================================= */
+:root {
+  --primary: #2c3e50;    /* Azul oscuro */
+  --secondary: #3498db;  /* Azul claro */
+  --accent: #e67e22;     /* Naranja (huellas) */
+  --bg: #f0f2f5;         /* Fondo grisáceo */
+  --white: #ffffff;
+  --text: #333333;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+/* =========================================================
+   LAYOUT ESTRUCTURA
+   ========================================================= */
+.app-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  width: 100%;
+  max-width: 1000px; /* Ancho máximo para que no se estire demasiado */
+  margin: 2rem auto;
+  padding: 2rem;
+  background: var(--white);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+/* =========================================================
+   NAVBAR (BARRA SUPERIOR)
+   ========================================================= */
+.navbar {
+  background-color: var(--primary);
+  color: var(--white);
+  padding: 1rem 0;
+}
+
+.navbar-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.nav-links a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  margin: 0 1rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+  color: var(--white);
+  border-bottom: 2px solid var(--secondary);
+}
+
+/* =========================================================
+   COMPONENTES DE PRUEBA (BOTONES Y TEXTOS)
+   ========================================================= */
+.btn-logout {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-left: 1rem;
+}
+
+.user-menu {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer {
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.85rem;
+  color: #7f8c8d;
+}
+
+/* Estilo para el 404 o mensajes de error */
+.error-card {
+  text-align: center;
+  padding: 3rem;
+}
