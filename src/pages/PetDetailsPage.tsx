@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { petService } from "../services/petService";
 import Header from "../components/Header";
+import type { Pet } from "../types/Pet";
 
 
 export default function PetDetailsPage() {
@@ -26,7 +27,7 @@ export default function PetDetailsPage() {
         cargarDetalle();
     }, [id]);
 
-    if (loading) return <div className="container"><p>Cargando detalles de la mascota...</p></div>;
+    if (!pet) return <div className="container"><p>No se ha encontrado la mascota seleccionada.</p></div>;
 
     return (
         <div className="container">
