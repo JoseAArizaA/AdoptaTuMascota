@@ -9,7 +9,7 @@ export default function AppLayout() {
             <header className="navbar">
                 <div className="navbar-content">
                     <div className="nav-left">
-                        <Link to="/pets" className="logo">
+                        <Link to="/about" className="logo">
                             AdoptaTuMascota 🐕
                         </Link>
                     </div>

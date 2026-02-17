@@ -43,7 +43,7 @@ function App() {
         <Route path="/pets/edit/:id" element={
           <ProtectedRoute>
             <EditPetPage />
-            </ProtectedRoute>
+          </ProtectedRoute>
         } />
 
         {/* Ruta de creación de mascota */}

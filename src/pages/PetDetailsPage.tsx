@@ -27,7 +27,7 @@ export default function PetDetailsPage() {
         cargarDetalle();
     }, [id]);
 
-    if (!pet) return <div className="container"><p>No se ha encontrado la mascota seleccionada.</p></div>;
+    if (!pet) return <div className="container"><p>Cargando detalles de la mascota...</p></div>;
 
     return (
         <div className="container">
