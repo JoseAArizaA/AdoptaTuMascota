@@ -2,7 +2,7 @@
 
 Aplicación web SPA para la gestión y adopción de mascotas, desarrollada con React + TypeScript y un backend con Express + JSON Server.
 
-**Autor:** José Antonio — 2.º DAW · Desarrollo de Entornos Web en el Cliente (DEWC)
+**Autor:** José Antonio Ariza Aguilera — 2.º DAW ·
 
 ---
 
