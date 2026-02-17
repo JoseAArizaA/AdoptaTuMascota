@@ -1,23 +1,28 @@
-import { NavLink, Outlet } from "react-router-dom";
+import { Link, NavLink, Outlet } from "react-router-dom";
 import { useAuth } from "../auth/authContext";
 
 export default function AppLayout() {
-    const { isAuthenticated, user, logout } = useAuth();
+    const { isAuthenticated, logout } = useAuth();
 
     return (
         <div className="app-layout">
             <header className="navbar">
                 <div className="navbar-content">
-                    <span className="logo">🐾 Huellas & Hogar</span>
+                    <div className="nav-left">
+                        <Link to="/pets" className="logo">
+                            AdoptaTuMascota 🐕
+                        </Link>
+                    </div>
                     
                     <nav className="nav-links">
+                        {/* Enlace publico */}
                         <NavLink to="/about">Sobre Nosotros</NavLink>
                         
-                        {/* Enlaces protegidos: Solo se ven si hay login */}
+                        {/* Enlaces protegidos */}
                         {isAuthenticated && (
                             <>
                                 <NavLink to="/pets">Gestión de Mascotas</NavLink>
-                                <NavLink to="/profile">Mi Perfil</NavLink>
+                                <NavLink to="/adopted">Mascotas Adoptadas</NavLink>
                             </>
                         )}
                     </nav>
@@ -25,12 +30,12 @@ export default function AppLayout() {
                     <div className="auth-section">
                         {isAuthenticated ? (
                             <div className="user-menu">
-                                <span>Hola, <strong>{user?.name}</strong></span>
-                                <button onClick={logout} className="btn-logout">Salir</button>
+                                <NavLink to="/profile">Mi Perfil</NavLink>
+                                <button onClick={logout} className="btn-logout">Cerrar Sesión</button>
                             </div>
                         ) : (
                             <div className="guest-menu">
-                                <NavLink to="/login">Entrar</NavLink>
+                                <NavLink to="/login">Iniciar Sesión</NavLink>
                                 <NavLink to="/register" className="btn-register">Registrarse</NavLink>
                             </div>
                         )}
@@ -44,7 +49,7 @@ export default function AppLayout() {
             </main>
 
             <footer className="footer">
-                <p>&copy; 2026 Protectora de Animales - Proyecto React</p>
+                <p>&copy; 2026 Protectora de Animales AdoptaTuMascota - Jose Antonio Ariza Aguilera</p>
             </footer>
         </div>
     );

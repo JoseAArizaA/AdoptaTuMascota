@@ -1,0 +1,73 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "usuario@gmail.com",
+      "name": "usuario",
+      "passwordHash": "$2b$10$aePLoLrFe24UyXQe0JClMefC4/k8jyrUsgNBI5OKJaHf2y/bGrtxW"
+    },
+    {
+      "id": 2,
+      "email": "admin@gmail.com",
+      "name": "admin",
+      "passwordHash": "$2b$10$Cogpy13OblVHxzHz.wIOle5H2.wGs2oEAES5UBJqalF0lMfj1BVRq"
+    }
+  ],
+  "pets": [
+    {
+      "id": 1,
+      "nombre": "Luna",
+      "especie": "Perro",
+      "raza": "Labrador",
+      "edad": 3,
+      "descripcion": "Luna es una perra muy cariñosa y juguetona. Le encanta pasear y jugar con pelotas.",
+      "adoptado": false,
+      "imagenUrl": "https://images.unsplash.com/photo-1552053831-71594a27632d?w=400",
+      "userId": 1
+    },
+    {
+      "id": 2,
+      "nombre": "Michi",
+      "especie": "Gato",
+      "raza": "Siamés",
+      "edad": 2,
+      "descripcion": "Michi es un gato tranquilo y muy limpio. Ideal para apartamentos.",
+      "adoptado": false,
+      "imagenUrl": "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=400",
+      "userId": 1
+    },
+    {
+      "id": 3,
+      "nombre": "Max",
+      "especie": "Perro",
+      "raza": "Golden Retriever",
+      "edad": 5,
+      "descripcion": "Max es un perro muy fiel y protector. Perfecto para familias con niños.",
+      "adoptado": true,
+      "imagenUrl": "https://images.unsplash.com/photo-1633722715463-d30f4f325e24?w=400",
+      "userId": 2
+    },
+    {
+      "id": 4,
+      "nombre": "Coco",
+      "especie": "Conejo",
+      "raza": "Belier",
+      "edad": 1,
+      "descripcion": "Coco es un conejito muy dócil y curioso. Le gusta explorar y comer zanahorias.",
+      "adoptado": false,
+      "imagenUrl": "https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308?w=400",
+      "userId": 1
+    },
+    {
+      "id": 5,
+      "nombre": "Rocky",
+      "especie": "Perro",
+      "raza": "Bulldog Francés",
+      "edad": 4,
+      "descripcion": "Rocky es un perro muy simpático y sociable. Se lleva bien con otros animales.",
+      "adoptado": false,
+      "imagenUrl": "https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=400",
+      "userId": 2
+    }
+  ]
+}
